@@ -1,5 +1,10 @@
 locals {
   private_zone_name = var.with_internet_gateway ? "private" : "amber"
+
+  number_used_azs = min(var.number_of_availability_zones, length(data.aws_availability_zones.available.zone_ids))
+  number_of_nat_gateways = var.with_internet_gateway ? local.number_used_azs : 0
+
+  all_ip_addresses      = "0.0.0.0/0"
 }
 
 module meta {

@@ -58,6 +58,8 @@ variable internal_zone_cidr_block {
   default = ""
 }
 
+data aws_availability_zones available {}
+
 output vpc_id {
   value = module.external_vpc.vpc_id
 }
