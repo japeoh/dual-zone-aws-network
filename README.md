@@ -1,1 +1,5 @@
-# dual-zone-aws-network
+# Dual Zone AWS Network Terraform Module
+
+## Variables
+
+## Output
